@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		85CCB9BA291E539D00A3FE7C /* SwiftMapAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CCB9B9291E539D00A3FE7C /* SwiftMapAppApp.swift */; };
+		85CCB9BA291E539D00A3FE7C /* SwiftMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CCB9B9291E539D00A3FE7C /* SwiftMapApp.swift */; };
 		85CCB9BC291E539D00A3FE7C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CCB9BB291E539D00A3FE7C /* ContentView.swift */; };
-		85CCB9BE291E539E00A3FE7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85CCB9BD291E539E00A3FE7C /* Assets.xcassets */; };
 		85CCB9C1291E539E00A3FE7C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85CCB9C0291E539E00A3FE7C /* Preview Assets.xcassets */; };
 		85CCB9CB291E539F00A3FE7C /* SwiftMapAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CCB9CA291E539F00A3FE7C /* SwiftMapAppTests.swift */; };
 		85CCB9D5291E539F00A3FE7C /* SwiftMapAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CCB9D4291E539F00A3FE7C /* SwiftMapAppUITests.swift */; };
 		85CCB9D7291E539F00A3FE7C /* SwiftMapAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CCB9D6291E539F00A3FE7C /* SwiftMapAppUITestsLaunchTests.swift */; };
+		85CCB9E4291E567500A3FE7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85CCB9E3291E567500A3FE7C /* Assets.xcassets */; };
+		85CCB9E6291E569000A3FE7C /* LocationsDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CCB9E5291E569000A3FE7C /* LocationsDataService.swift */; };
+		85CCB9EB291E595100A3FE7C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CCB9EA291E595100A3FE7C /* Location.swift */; };
+		85CCB9EE291E8B3000A3FE7C /* LocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CCB9ED291E8B3000A3FE7C /* LocationsView.swift */; };
+		85CCB9F0291E8FD500A3FE7C /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CCB9EF291E8FD500A3FE7C /* LocationsViewModel.swift */; };
+		85CCB9F4291E99C400A3FE7C /* LocationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CCB9F3291E99C400A3FE7C /* LocationsListView.swift */; };
+		85CCB9F8291EAF3100A3FE7C /* LocationDescView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CCB9F7291EAF3100A3FE7C /* LocationDescView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,15 +41,21 @@
 
 /* Begin PBXFileReference section */
 		85CCB9B6291E539D00A3FE7C /* SwiftMapApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftMapApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		85CCB9B9291E539D00A3FE7C /* SwiftMapAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMapAppApp.swift; sourceTree = "<group>"; };
+		85CCB9B9291E539D00A3FE7C /* SwiftMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMapApp.swift; sourceTree = "<group>"; };
 		85CCB9BB291E539D00A3FE7C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		85CCB9BD291E539E00A3FE7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85CCB9C0291E539E00A3FE7C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		85CCB9C6291E539F00A3FE7C /* SwiftMapAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftMapAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85CCB9CA291E539F00A3FE7C /* SwiftMapAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMapAppTests.swift; sourceTree = "<group>"; };
 		85CCB9D0291E539F00A3FE7C /* SwiftMapAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftMapAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85CCB9D4291E539F00A3FE7C /* SwiftMapAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMapAppUITests.swift; sourceTree = "<group>"; };
 		85CCB9D6291E539F00A3FE7C /* SwiftMapAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMapAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		85CCB9E3291E567500A3FE7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		85CCB9E5291E569000A3FE7C /* LocationsDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsDataService.swift; sourceTree = "<group>"; };
+		85CCB9EA291E595100A3FE7C /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		85CCB9ED291E8B3000A3FE7C /* LocationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsView.swift; sourceTree = "<group>"; };
+		85CCB9EF291E8FD500A3FE7C /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
+		85CCB9F3291E99C400A3FE7C /* LocationsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsListView.swift; sourceTree = "<group>"; };
+		85CCB9F7291EAF3100A3FE7C /* LocationDescView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDescView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +106,13 @@
 		85CCB9B8291E539D00A3FE7C /* SwiftMapApp */ = {
 			isa = PBXGroup;
 			children = (
-				85CCB9B9291E539D00A3FE7C /* SwiftMapAppApp.swift */,
+				85CCB9B9291E539D00A3FE7C /* SwiftMapApp.swift */,
 				85CCB9BB291E539D00A3FE7C /* ContentView.swift */,
-				85CCB9BD291E539E00A3FE7C /* Assets.xcassets */,
+				85CCB9EC291E5A7C00A3FE7C /* DataSource */,
+				85CCB9E7291E582500A3FE7C /* Views */,
+				85CCB9E9291E585100A3FE7C /* ViewModels */,
+				85CCB9E8291E584100A3FE7C /* Models */,
+				85CCB9E3291E567500A3FE7C /* Assets.xcassets */,
 				85CCB9BF291E539E00A3FE7C /* Preview Content */,
 			);
 			path = SwiftMapApp;
@@ -125,6 +141,40 @@
 				85CCB9D6291E539F00A3FE7C /* SwiftMapAppUITestsLaunchTests.swift */,
 			);
 			path = SwiftMapAppUITests;
+			sourceTree = "<group>";
+		};
+		85CCB9E7291E582500A3FE7C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				85CCB9ED291E8B3000A3FE7C /* LocationsView.swift */,
+				85CCB9F3291E99C400A3FE7C /* LocationsListView.swift */,
+				85CCB9F7291EAF3100A3FE7C /* LocationDescView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		85CCB9E8291E584100A3FE7C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				85CCB9EA291E595100A3FE7C /* Location.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		85CCB9E9291E585100A3FE7C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				85CCB9EF291E8FD500A3FE7C /* LocationsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		85CCB9EC291E5A7C00A3FE7C /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				85CCB9E5291E569000A3FE7C /* LocationsDataService.swift */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,8 +281,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85CCB9E4291E567500A3FE7C /* Assets.xcassets in Resources */,
 				85CCB9C1291E539E00A3FE7C /* Preview Assets.xcassets in Resources */,
-				85CCB9BE291E539E00A3FE7C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +308,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				85CCB9BC291E539D00A3FE7C /* ContentView.swift in Sources */,
-				85CCB9BA291E539D00A3FE7C /* SwiftMapAppApp.swift in Sources */,
+				85CCB9F4291E99C400A3FE7C /* LocationsListView.swift in Sources */,
+				85CCB9F0291E8FD500A3FE7C /* LocationsViewModel.swift in Sources */,
+				85CCB9BA291E539D00A3FE7C /* SwiftMapApp.swift in Sources */,
+				85CCB9F8291EAF3100A3FE7C /* LocationDescView.swift in Sources */,
+				85CCB9EE291E8B3000A3FE7C /* LocationsView.swift in Sources */,
+				85CCB9EB291E595100A3FE7C /* Location.swift in Sources */,
+				85CCB9E6291E569000A3FE7C /* LocationsDataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +476,7 @@
 				DEVELOPMENT_TEAM = 64KT797F3Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = SwifMapApp;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -450,6 +507,7 @@
 				DEVELOPMENT_TEAM = 64KT797F3Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = SwifMapApp;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
