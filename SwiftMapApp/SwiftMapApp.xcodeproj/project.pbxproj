@@ -20,6 +20,8 @@
 		85CCB9F0291E8FD500A3FE7C /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CCB9EF291E8FD500A3FE7C /* LocationsViewModel.swift */; };
 		85CCB9F4291E99C400A3FE7C /* LocationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CCB9F3291E99C400A3FE7C /* LocationsListView.swift */; };
 		85CCB9F8291EAF3100A3FE7C /* LocationDescView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CCB9F7291EAF3100A3FE7C /* LocationDescView.swift */; };
+		85CCB9FA291ECFDE00A3FE7C /* LocationMapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CCB9F9291ECFDE00A3FE7C /* LocationMapAnnotationView.swift */; };
+		85CCB9FC291EDB8400A3FE7C /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CCB9FB291EDB8400A3FE7C /* LocationDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		85CCB9EF291E8FD500A3FE7C /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
 		85CCB9F3291E99C400A3FE7C /* LocationsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsListView.swift; sourceTree = "<group>"; };
 		85CCB9F7291EAF3100A3FE7C /* LocationDescView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDescView.swift; sourceTree = "<group>"; };
+		85CCB9F9291ECFDE00A3FE7C /* LocationMapAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapAnnotationView.swift; sourceTree = "<group>"; };
+		85CCB9FB291EDB8400A3FE7C /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,8 @@
 				85CCB9ED291E8B3000A3FE7C /* LocationsView.swift */,
 				85CCB9F3291E99C400A3FE7C /* LocationsListView.swift */,
 				85CCB9F7291EAF3100A3FE7C /* LocationDescView.swift */,
+				85CCB9F9291ECFDE00A3FE7C /* LocationMapAnnotationView.swift */,
+				85CCB9FB291EDB8400A3FE7C /* LocationDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -308,12 +314,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				85CCB9BC291E539D00A3FE7C /* ContentView.swift in Sources */,
+				85CCB9FA291ECFDE00A3FE7C /* LocationMapAnnotationView.swift in Sources */,
 				85CCB9F4291E99C400A3FE7C /* LocationsListView.swift in Sources */,
 				85CCB9F0291E8FD500A3FE7C /* LocationsViewModel.swift in Sources */,
 				85CCB9BA291E539D00A3FE7C /* SwiftMapApp.swift in Sources */,
 				85CCB9F8291EAF3100A3FE7C /* LocationDescView.swift in Sources */,
 				85CCB9EE291E8B3000A3FE7C /* LocationsView.swift in Sources */,
 				85CCB9EB291E595100A3FE7C /* Location.swift in Sources */,
+				85CCB9FC291EDB8400A3FE7C /* LocationDetailView.swift in Sources */,
 				85CCB9E6291E569000A3FE7C /* LocationsDataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

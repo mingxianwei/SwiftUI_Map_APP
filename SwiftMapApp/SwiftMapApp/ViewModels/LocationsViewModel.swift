@@ -9,6 +9,7 @@ import Foundation
 import MapKit
 import SwiftUI
 
+
 class LocationsViewModel: ObservableObject {
     /// 所有位置数组
     @Published var locations: [Location]
@@ -22,7 +23,7 @@ class LocationsViewModel: ObservableObject {
     
     // 地图视图显示的经纬度
     @Published var mapRegion: MKCoordinateRegion = MKCoordinateRegion()
-    
+   
     //地图视图是否显示locationListView
     @Published var showLocationListView:Bool = false
     
@@ -31,28 +32,21 @@ class LocationsViewModel: ObservableObject {
         let locations = LocationsDataService.locations
         self.locations = locations
         self.mapLocation = locations.first!
-        self .updateMapRegion(location: self.mapLocation)
+        self.updateMapRegion(location: self.mapLocation)
     }
     
     private func updateMapRegion(location:Location) {
-        withAnimation {
+    
+        withAnimation(.easeInOut) {
             self.mapRegion = MKCoordinateRegion(center: location.coordinates, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
         }
     }
     
     
-    func toggleShowLocationListView()  {
-        withAnimation {
-            showLocationListView = !showLocationListView
-        }
-    }
-    
-    
     func showNextLocation(location:Location)  {
-        // withAnimation 需要引入SwiftUI
-        withAnimation {
-            mapLocation = location
-            toggleShowLocationListView()
+        withAnimation(.easeInOut) {
+            self.mapLocation = location
+            self.showLocationListView = false
         }
 
     }
@@ -67,17 +61,26 @@ class LocationsViewModel: ObservableObject {
         if locations.count > 0 {
             let nextIndex = ( currentIndex + 1 ) % locations.count
             let location = locations[nextIndex]
-            withAnimation {
-                mapLocation = location
-                showLocationListView = false
-            }
+            
+            showNextLocation(location: location)
             
         } else {
             print("ERROR")
         }
-        
-       
-        
-        
+    }
+}
+
+
+//
+extension MKCoordinateRegion: Equatable {
+    public static func == (lhs: MKCoordinateRegion, rhs: MKCoordinateRegion) -> Bool {
+        if lhs.center.latitude == rhs.center.latitude &&
+            lhs.center.longitude == rhs.center.longitude &&
+            lhs.span.latitudeDelta == rhs.span.latitudeDelta &&
+            lhs.span.longitudeDelta == rhs.span.longitudeDelta {
+            return true
+        } else {
+            return false
+        }
     }
 }

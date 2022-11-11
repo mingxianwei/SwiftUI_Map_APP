@@ -12,6 +12,9 @@ struct LocationDescView: View {
     
     @EnvironmentObject var viewModel: LocationsViewModel
     
+    // Bug 这里去掉 这个变量 将会造成底部视图不同步
+    let location: Location
+    
     //MARK: - === Body ===
     var body: some View {
         HStack(alignment: .bottom) {
@@ -21,6 +24,7 @@ struct LocationDescView: View {
             }
             
             Spacer()
+            
             VStack {
                 learnMoreButton
                 nextButton
@@ -44,7 +48,7 @@ extension LocationDescView {
     private var imageSection: some View {
         ZStack {
             VStack{
-                if let imageName = viewModel.mapLocation.imageNames.first {
+                if let imageName = location.imageNames.first {
                     Image(imageName)
                         .resizable()
                         .scaledToFit()
@@ -61,10 +65,10 @@ extension LocationDescView {
     // 名称和城市
     private var titleSection: some View {
         VStack (alignment: .leading,spacing: 6){
-            Text(viewModel.mapLocation.name)
+            Text(location.name)
                 .font(.headline)
                 .fontWeight(.black)
-            Text(viewModel.mapLocation.cityName)
+            Text(location.cityName)
                 .font(.subheadline)
                 .fontWeight(.medium)
         }
@@ -85,7 +89,6 @@ extension LocationDescView {
     //下一个按钮
     private var nextButton: some View {
         Button {
-            // TODO: 稍后添加点击事件
             viewModel.switchToNextLocation()
         } label: {
             Text("Next")
@@ -104,7 +107,7 @@ struct LocationDescView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color.green.edgesIgnoringSafeArea(.vertical)
-            LocationDescView()
+            LocationDescView(location:LocationsDataService.locations.first!)
                 .environmentObject(LocationsViewModel())
                 
         }
