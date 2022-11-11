@@ -41,11 +41,18 @@ class LocationsViewModel: ObservableObject {
     }
     
     
+    func toggleShowLocationListView()  {
+        withAnimation {
+            showLocationListView = !showLocationListView
+        }
+    }
+    
+    
     func showNextLocation(location:Location)  {
-        // withAnimation 需要引入SwiftUI  
+        // withAnimation 需要引入SwiftUI
         withAnimation {
             mapLocation = location
-            showLocationListView.toggle()
+            toggleShowLocationListView()
         }
 
     }

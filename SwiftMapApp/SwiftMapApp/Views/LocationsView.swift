@@ -35,7 +35,6 @@ struct LocationsView: View {
                             LocationDescView(location: viewModel.mapLocation)
                                 .shadow(color: Color.black.opacity(0.3),radius: 20)
                                 .padding()
-                                //TODO: Bug Need Fix transition Do not work
                                 .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
 
                         }
@@ -69,7 +68,7 @@ extension LocationsView {
                     .animation(.easeInOut, value: viewModel.showLocationListView)
             }
             .onTapGesture {
-                viewModel.showLocationListView.toggle()
+                viewModel.toggleShowLocationListView()
             }
             
             if viewModel.showLocationListView {
