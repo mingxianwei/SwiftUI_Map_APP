@@ -17,7 +17,7 @@ struct LocationsListView: View {
         List {
             ForEach(viewModel.locations) { location in
                 Button {
-                    viewModel.showNetLocation(location: location)
+                    viewModel.showNextLocation(location: location)
                 } label: {
                     listRowView(location: location)
                           .listRowBackground(Color.clear)

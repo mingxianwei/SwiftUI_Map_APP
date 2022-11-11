@@ -7,6 +7,7 @@
 
 import Foundation
 import MapKit
+import SwiftUI
 
 class LocationsViewModel: ObservableObject {
     /// 所有位置数组
@@ -34,12 +35,18 @@ class LocationsViewModel: ObservableObject {
     }
     
     private func updateMapRegion(location:Location) {
-        self.mapRegion = MKCoordinateRegion(center: location.coordinates, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
+        withAnimation {
+            self.mapRegion = MKCoordinateRegion(center: location.coordinates, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
+        }
     }
     
     
-    func showNetLocation(location:Location)  {
-        mapLocation = location
-        showLocationListView.toggle()
+    func showNextLocation(location:Location)  {
+        // withAnimation 需要引入SwiftUI  
+        withAnimation {
+            mapLocation = location
+            showLocationListView.toggle()
+        }
+
     }
 }
