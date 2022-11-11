@@ -56,4 +56,28 @@ class LocationsViewModel: ObservableObject {
         }
 
     }
+    
+    // 切换到下一个 Location
+    func switchToNextLocation() {
+        guard let currentIndex = locations.firstIndex(where: { $0 == mapLocation }) else {
+            print("Error.Can Not Find Current Location in locationArray,Should Never Happen ")
+            return
+        }
+        
+        if locations.count > 0 {
+            let nextIndex = ( currentIndex + 1 ) % locations.count
+            let location = locations[nextIndex]
+            withAnimation {
+                mapLocation = location
+                showLocationListView = false
+            }
+            
+        } else {
+            print("ERROR")
+        }
+        
+       
+        
+        
+    }
 }

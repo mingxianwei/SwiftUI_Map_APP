@@ -10,7 +10,7 @@ import SwiftUI
 //MARK: - === View ===
 struct LocationDescView: View {
     
-    let location:Location
+    @EnvironmentObject var viewModel: LocationsViewModel
     
     //MARK: - === Body ===
     var body: some View {
@@ -44,7 +44,7 @@ extension LocationDescView {
     private var imageSection: some View {
         ZStack {
             VStack{
-                if let imageName = location.imageNames.first {
+                if let imageName = viewModel.mapLocation.imageNames.first {
                     Image(imageName)
                         .resizable()
                         .scaledToFit()
@@ -61,10 +61,10 @@ extension LocationDescView {
     // 名称和城市
     private var titleSection: some View {
         VStack (alignment: .leading,spacing: 6){
-            Text(location.name)
+            Text(viewModel.mapLocation.name)
                 .font(.headline)
                 .fontWeight(.black)
-            Text(location.cityName)
+            Text(viewModel.mapLocation.cityName)
                 .font(.subheadline)
                 .fontWeight(.medium)
         }
@@ -86,6 +86,7 @@ extension LocationDescView {
     private var nextButton: some View {
         Button {
             // TODO: 稍后添加点击事件
+            viewModel.switchToNextLocation()
         } label: {
             Text("Next")
                 .font(.headline)
@@ -103,8 +104,8 @@ struct LocationDescView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color.green.edgesIgnoringSafeArea(.vertical)
-            LocationDescView(location: LocationsDataService.locations.first!)
-                .padding()
+            LocationDescView()
+                .environmentObject(LocationsViewModel())
                 
         }
     }
