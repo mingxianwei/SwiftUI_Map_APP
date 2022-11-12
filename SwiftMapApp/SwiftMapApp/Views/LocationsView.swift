@@ -13,11 +13,15 @@ import MapKit
 //MARK: - === View ===
 struct LocationsView: View {
     
+    let maxWidthForIpad: CGFloat = 700
     @EnvironmentObject private var viewModel: LocationsViewModel
     
     @State private var  showLocationList: Bool = false
     @State private var  mapLocation:Location = LocationsDataService.locations.first!
     @State private var  mapRegion: MKCoordinateRegion = MKCoordinateRegion()
+    
+    
+    
     
     //MARK: - === Body ===
     var body: some View {
@@ -27,6 +31,7 @@ struct LocationsView: View {
             VStack {
                 headerView
                     .padding()
+                    .frame(maxWidth: maxWidthForIpad)
                 Spacer()
                 bottomLayer
             }
@@ -103,6 +108,8 @@ extension LocationsView {
                     LocationDescView(location: location)
                         .shadow(color: Color.black.opacity(0.3),radius: 20)
                         .padding()
+                        .frame(maxWidth: maxWidthForIpad)
+                        .frame(maxWidth: .infinity)
                         .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
                     
                 }
