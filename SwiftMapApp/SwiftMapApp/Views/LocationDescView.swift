@@ -77,7 +77,7 @@ extension LocationDescView {
     // 更多按钮
     private var learnMoreButton: some View {
         Button {
-            // TODO: 稍后添加点击事件
+            viewModel.sheetLocation = location
         } label: {
             Text("Learn More")
                 .font(.headline)

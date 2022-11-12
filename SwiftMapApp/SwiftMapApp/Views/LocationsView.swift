@@ -37,6 +37,9 @@ struct LocationsView: View {
         .onAppear(){
             mapRegion = viewModel.mapRegion
         }
+        .sheet(item: $viewModel.sheetLocation, onDismiss: nil) {
+            LocationDetailView(location: $0)
+        }
     }
 }
 
@@ -90,6 +93,7 @@ extension LocationsView {
             }
         })
         .ignoresSafeArea()
+        .animation(.easeInOut, value: viewModel.mapLocation)
     }
     
     private var bottomLayer: some View {
